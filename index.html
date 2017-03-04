@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+body {
+	font-family: sans-serif;
+}
+</style>
+<script>
+function navigateToAddress() {
+	var addr = document.getElementById("addressbar").value;
+	if (addr.indexOf("://") == -1) {
+		addr = "http://" + addr;
+	}
+	window.location = addr;
+	return false;
+}
+</script>
+</head>
+<body>
+<form onsubmit="return navigateToAddress()">
+<input inputmode="url" id="addressbar">
+<input type="submit" value="Go">
+</form>
+<br>
+<a href="https://www.google.com">Google</a>
+<br>
+<a href="https://duckduckgo.com">DuckDuckGo</a>
+<br>
+<a href="https://en.m.wikipedia.org">Wikipedia</a>
+<br>
+<a href="http://zhuoweizhang.net/2048/">2048</a>
+<br>
+<a href="https://www.reddit.com/r/NintendoSwitch">r/NintendoSwitch</a>
+<br>
+<a href="https://webkit.org/perf/sunspider/sunspider.html">SunSpider benchmark</a>
+<br>
+<a href="https://html5test.com/">HTML5Test</a>
+<br>
+<a href="https://github.com/zhuowei/SwitchBrowserUnlock">Want to help? https://github.com/zhuowei/SwitchBrowserUnlock</a>
+<br>
+<button onclick="window.location.reload()">Refresh</button>
+
+</body>
+</html>
